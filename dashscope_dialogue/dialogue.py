@@ -10,7 +10,7 @@ import prompts
 
 web = Flask(__name__)
 
-dashscope.api_key = 'sk-2910abbb971e45df8718a46b2984bc56'
+dashscope.api_key = '# your dashscope api key here'
 
 jsonFilePathOfHistory = './history/history.json'
 
@@ -33,7 +33,6 @@ checkingSent = {'message': 'none', 'time': datetime(1, 1, 1, 0, 0, 0, 0).strftim
 checkingSentTime = datetime(1, 1, 1, 0, 0, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
 answerSent = {'message': 'none', 'time': datetime(1, 1, 1, 0, 0, 0, 0).strftime("%Y-%m-%d %H:%M:%S")}
 answerSentTime = datetime(1, 1, 1, 0, 0, 0, 0).strftime("%Y-%m-%d %H:%M:%S")
-
 
 def agentCalling(prompt, history):
     response = Generation.call(
