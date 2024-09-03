@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="templates/student.css">
+</head>
+<body>
+    <div class="initialPage" id="initialPage">
+        <form id="initialForm">
+            <div class="row">
+                <h1 style=" margin-right: 15px;">请输入题目</h1>
+                <p id="loading" style="visibility: hidden; margin-bottom: 25px; color: #707070; font-weight: bold; font-family: 'SimHei', sans-serif;">解题步骤生成中...</p>
+            </div>
+            <div>
+                <textarea class="lineContent" id="lineContent" type="text" placeholder="题目内容..." required></textarea>
+            </div>
+            <div id="filePathInputDiv"  style="display:none;">
+                <input class="filePath" id="filePath" type="text" placeholder="文件路径..." autocomplete="off">
+            </div>
+            <div class="row">
+                <select id="type" onchange="toggleFileInput()" style=" margin-right: 20px;">
+                    <option value="False">是否需要添加附件：否</option>
+                    <option value="True">是否需要添加附件：是</option>
+                </select>
+                <button id="submitQuestion" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <div class="dialoguePage" id="dialoguePage" style="display:none;">
+        <form id="dialogueForm" style="width: 100%;">
+            <h1>学生</h1>
+            <div class="dialogueBox" id="dialogueBox"></div>
+            <div class="row">
+                <input id="userInput" type="text" style=" margin-right: 20px;" placeholder="请勿输入，回答生成中..." autocomplete="off" disabled>
+                <button id="submitAnswer" type="submit" disabled>提交</button>
+            </div>
+        </form>
+    </div>
+    <script src="templates/student.js"></script>
+</body>
+</html>

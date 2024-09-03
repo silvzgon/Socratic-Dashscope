@@ -1,0 +1,135 @@
+body {
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 0;
+}
+button {
+    background-color: #64b067;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'SimHei', sans-serif;
+}
+h1 {
+    color: #645f5f;
+    font-family: 'SimHei', sans-serif;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    margin-top: 5%;
+    padding: 50px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.borderContainer {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 600px;
+    height: 80px;
+}
+.borderContainer::after {
+    content: '';
+    position: absolute;
+    right: 122px;
+    bottom: 0;
+    width: 478px;
+    height: 2px;
+    background-color: #ccc;
+}
+.toggleContainer {
+    display: flex;
+    margin-top: 45px;
+    width: 120px;
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-top: 2px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    background-color: #ccc;
+}
+.toggleOption {
+    flex: 1;
+    padding: 7px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+    font-family: 'SimHei', sans-serif;
+    font-weight: 500;
+}
+.toggleOption.selected {
+    background-color: #f9f9f9;
+    border-radius: 5px 5px 0 0;
+}
+.toggleOption:not(.selected) {
+    background-color: #ccc;
+    border-bottom: 2px solid #ccc;
+    border-radius: 5px 5px 0 0;
+    color: #4b4b4b;
+}
+.toggleOption.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+}
+.stepBox, .dialogueBox {
+    border-left: 2px solid #ccc;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    height: 400px;
+    overflow-y: scroll;
+    background-color: #f9f9f9;
+}
+.userText {
+    text-align: right;
+    white-space: pre-wrap;
+    color: #333;
+    font-family: 'Helvetica';
+}
+.botText {
+    text-align: left;
+    white-space: pre-wrap;
+    color: #333;
+    font-family: 'Helvetica';
+}
+.systemText {
+    text-align: left;
+    white-space: pre-wrap;
+    color: #857d7d;
+    font-weight: bold;
+    font-family: 'Helvetica';
+}
+.amendments, .checking {
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'SimHei', sans-serif;
+    color: #645f5f;
+}
+.row {
+    display: flex;
+    align-items: flex-end;
+}
+.row select {
+    height: 40px;
+    width: 500px;
+    padding: 6px;
+    box-sizing: border-box;
+    font-size: 12px;
+    font-family: 'SimHei', sans-serif;
+    color: #645f5f;
+}
+.row button {
+    height: 40px;
+    width: 80px;
+    padding: 10px;
+    box-sizing: border-box;
+}
