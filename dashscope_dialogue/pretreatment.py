@@ -15,7 +15,7 @@ def pretreatment(lineContent, filePath, amendments, type):
         try:
             i += 1
 
-            client = OpenAI(api_key="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")
+            client = OpenAI(api_key="# your openai api key here")
 
             if type == 'True':
                 file = client.files.create(
