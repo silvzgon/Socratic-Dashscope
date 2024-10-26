@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher</title>
+    <link rel="stylesheet" href="templates/teacher.css">
+</head>
+<body>
+    <div class="container">
+        <div class="borderContainer">
+            <h1>教师</h1>
+            <div class="toggleContainer">
+                <div id="step" class="toggleOption selected" onclick="toggleOption('step')">步骤</div>
+                <div id="dialogue" class="toggleOption disabled" onclick="toggleOption('dialogue')">对话</div>
+            </div>
+        </div>
+        <div class="stepBox" id="stepBox">
+            <p class="systemText">暂无内容...</p>
+        </div>
+        <form id="stepForm">
+            <div id="amendmentsInputDiv" style="display: none;">
+                <input class="amendments" id="amendments" type="text" placeholder="暂无内容，请勿输入。" autocomplete="off" disabled>
+            </div>
+            <div class="row">
+                <select id="amendmentsSelect" onchange="toggleInput('amendmentsInputDiv', 'amendmentsSelect')" style=" margin-right: 20px;" disabled>
+                    <option value="False">是否需要修改：否</option>
+                    <option value="True">是否需要修改：是</option>
+                </select>
+                <button id="amendmentsSubmit" type="submit" disabled>提交</button>
+            </div>
+        </form>
+        <form id="dialogueForm" style="display: none;">
+            <div class="dialogueBox" id="dialogueBox"></div>
+            <div id="checkingInputDiv" style="display: none;">
+                <input class="checking" id="checking" type="text" placeholder="你的修改意见..." autocomplete="off">
+            </div>
+            <div class="row">
+                <select id="checkingSelect" onchange="toggleInput('checkingInputDiv', 'checkingSelect')" style=" margin-right: 20px;">
+                    <option value="False">是否需要修改：否</option>
+                    <option value="True">是否需要修改：是</option>
+                </select>
+                <button id="checkingSubmit" type="submit">提交</button>
+            </div>
+        </form>
+    </div>
+    <script src="templates/teacher.js"></script>
+</body>
+</html>
